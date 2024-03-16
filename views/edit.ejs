@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ss{
+            background: rgb(21, 1, 1);
+            color:rgb(4, 245, 4);
+            padding:10px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>user name of the employee is :<%= user.email %></h1>
+    <form method="post" action="/user/<%=user.id %>?_method=PATCH">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <textarea name="username"> <%=user.username %></textarea>
+        <br/>
+        <input type="password" name="password" placeholder="enter password">
+        <br/>
+        <button class="ss">edit</button>
+    </form>
+</body>
+</html>
